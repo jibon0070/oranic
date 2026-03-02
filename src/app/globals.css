@@ -1,19 +1,115 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --primary: #607315;
+  --primary-dark: #00471b;
+  --dark: #222222;
+  --white: #ffffff;
+
+  /* Grey Colors */
+  --grey: #f3f4f6;
+  --grey-muted: #d9d9d9;
+  --border: #e5e5e5;
+  --muted-foreground: #737373;
+
+  /* Background Colors */
+  --background: #faffe5;
+  --bg-grey: #f7f7f7;
+
+  /* Accent Colors */
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green: #22c55e;
+  --yellow-50: #fefce8;
+  --yellow-100: #fef08a;
+  --yellow: #f3b33d;
+  --blue: #3b82f6;
+  --red: #ef4444;
+
+  /* Foreground */
+  --foreground: var(--dark);
 }
 
 @theme inline {
+  /* Color Mappings */
   --color-background: var(--background);
+  --color-bg-grey: var(--bg-grey);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-dark: var(--dark);
+  --color-white: var(--white);
+
+  --color-grey: var(--grey);
+  --color-grey-muted: var(--grey-muted);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green: var(--green);
+  --color-yellow-50: var(--yellow-50);
+  --color-yellow-100: var(--yellow-100);
+  --color-yellow: var(--yellow);
+  --color-blue: var(--blue);
+  --color-red: var(--red);
+
+  /* Fonts */
   --font-sans: var(--font-eb-garamond);
   --font-mono: var(--font-eb-garamond);
+
+  /* Typography Scale */
+  --text-h1: 80px;
+  --text-h1--line-height: 92px;
+  --text-h2: 56px;
+  --text-h2--line-height: 72px;
+  --text-h3: 48px;
+  --text-h3--line-height: 62px;
+  --text-h4: 40px;
+  --text-h4--line-height: 52px;
+
+  --text-title-1: 32px;
+  --text-title-1--line-height: 44px;
+  --text-title-2: 28px;
+  --text-title-2--line-height: 34px;
+  --text-title-3: 24px;
+  --text-title-3--line-height: 32px;
+  --text-title-4: 22px;
+  --text-title-4--line-height: 30px;
+
+  --text-body-1: 20px;
+  --text-body-1--line-height: 30px;
+  --text-body-2: 18px;
+  --text-body-2--line-height: 28px;
+  --text-body-3: 16px;
+  --text-body-3--line-height: 24px;
+
+  --text-caption: 14px;
+  --text-caption--line-height: 20px;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.custom-bullet {
+  @apply h-[5px] rounded-full bg-white/40 w-[60px] transition-all duration-300 ease-in-out inline-block cursor-pointer;
+}
+
+.custom-bullet-active {
+  @apply w-[80px] bg-primary;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-eb-garamond), Arial, Helvetica, sans-serif;
 }
