@@ -4,6 +4,7 @@ import Features from "./_components/features";
 import Categories from "./_components/categories";
 import Products from "./_components/products";
 import Hero2 from "./_components/hero2";
+import Reviews from "./_components/reviews";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Categories />
       <Products />
       <Hero2 />
+      <Reviews />
     </main>
   );
 }
