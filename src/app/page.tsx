@@ -9,6 +9,7 @@ import BeforeAndAfter from "./_components/before-and-after";
 import FAQ from "./_components/faq";
 import Blog from "./_components/blog";
 import Hero3 from "./_components/hero3";
+import Footer from "./_components/footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <FAQ />
       <Blog />
       <Hero3 />
+      <Footer />
     </main>
   );
 }
