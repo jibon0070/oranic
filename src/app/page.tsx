@@ -10,6 +10,11 @@ import FAQ from "./_components/faq";
 import Blog from "./_components/blog";
 import Hero3 from "./_components/hero3";
 import Footer from "./_components/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Oranic",
+};
 
 export default function Home() {
   return (
