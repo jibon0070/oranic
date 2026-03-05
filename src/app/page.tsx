@@ -6,6 +6,7 @@ import Products from "./_components/products";
 import Hero2 from "./_components/hero2";
 import Reviews from "./_components/reviews";
 import BeforeAndAfter from "./_components/before-and-after";
+import FAQ from "./_components/faq";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero2 />
       <Reviews />
       <BeforeAndAfter />
+      <FAQ />
     </main>
   );
 }
